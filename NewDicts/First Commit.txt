@@ -1,1 +1,4 @@
-To Remove
+- Java Et Java 8 ?
+- Confluence (Aucun)
+- Embedded C / C++ ? Fama chkoun hatet zouz 
+- Testing est bizarre
