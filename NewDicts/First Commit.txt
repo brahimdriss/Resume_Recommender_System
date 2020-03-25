@@ -1,4 +1,9 @@
-- Java Et Java 8 ?
-- Confluence (Aucun)
+Not Resolved : 
 - Embedded C / C++ ? Fama chkoun hatet zouz 
-- Testing est bizarre
+
+
+
+Resolved :
+- Spring / Spring Boot / Spring Session => All = Spring
+- Java / Java 8 => Java
+- Java+Jee = Jee
