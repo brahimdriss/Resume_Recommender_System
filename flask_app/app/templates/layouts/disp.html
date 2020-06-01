@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <div class="container" ali>
+            <h1>{{name}}</h1>
+            <!-- <h2> k meilleurs Profile for WEVIOO </h2> -->
+            
+
+        </div>
+    </header>
+    
+    <br>
+    <br>
+  
+    {% block content %}
+    <style>
+        p.ex1 {  margin: 100 px;}
+        table {
+            color: black !important;
+    
+    
+        }
+    
+        .table>table-layout: auto;
+        .table>width: 680px;
+    
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+    
+        .table>tbody>tr:hover {
+            background-color: #f5f5f5;
+        }
+    
+        .table>tbody>tr>td {
+            color: rgba(31, 76, 226, 0.7) !important;
+        }
+    </style>
+
+    <div>
+<!--         
+        <h3> ID : </h3>
+        {{ids}} -->
+        <div class="container">
+           <h3>Linkedin :</h3>         
+        </div>
+        <div class="container">
+        <a href={{url}}> Url </a>
+        </div>
+        
+        <br>
+
+        <div class="container">
+        <h3> Personnal Info : </h3>
+        </div>
+        {{p_info| safe }}
+        <br>
+
+        <div class="container">
+        <h3> Skills : </h3>
+        </div>
+        {{skills | safe }}
+        <br>
+
+        <div class="container">
+        <h3> Experiences : </h3>
+        </div>
+        <div class="container" style="overflow:scroll">
+            {{exp | safe }}
+        </div>
+        <br>
+
+        <div class="container">
+        <h3> Interests : </h3>
+        </div>
+        {{inter| safe }}
+        <br>
+
+        <div class="container">
+        <h3> Accomplishments : </h3>
+        </div>
+        {{acc| safe }}
+        <br>
+
+    </div>
+
+    {% endblock content %}
+
+
+
+    {% block javascripts %}
+    
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#table').DataTable({ responsive: true });
+        });
+    </script>
+    
+    
+    {% endblock javascripts %}
+
+
+
+
+</body>
+
+</html>

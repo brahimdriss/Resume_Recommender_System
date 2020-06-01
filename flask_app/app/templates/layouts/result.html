@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+	<header>
+
+    </header>
+    
+	<!-- <p style="color:blue;font-size:20;text-align: center;"><b>Results </b></p> -->
+	<div class="results">
+	<div class="container">
+        <br>
+    <div>
+         <!-- <h1>Voici les meilleurs profils : {{     ps.idx[0] }}</h1> -->
+        <h1>The top profiles for your search are : </h1>
+	</div>
+    
+	
+	</div>
+         
+        
+
+       
+        
+        
+        <br><br><br>
+     
+	</div>
+
+    
+    
+
+                {% block content %}
+
+            <style>
+                table {
+                    color: black !important;
+                      
+                    
+                }
+                .table>table-layout: auto;
+                .table>width: 680px;  
+                th, td {
+                  padding: 15px;
+                  text-align: left;
+                }
+                 .table>tbody>tr:hover {background-color: #f5f5f5;}
+                .table>tbody>tr>td {
+              color: rgba(31, 76, 226, 0.7) !important;
+                    }
+
+            </style>
+
+
+            <!-- <div class="container" style="overflow:scroll">
+                {{  ps.show_raw().to_html(classes="table striped",na_rep="-",table_id="table") | safe}}
+
+            </div> -->
+            <div class="container" style="overflow:scroll">
+                {{  ps.show_raw_clean().to_html(classes="table striped",na_rep="-",table_id="table",escape=False) | safe}}
+            
+            </div>
+
+
+            <!-- 
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#example2').DataTable();
+                });
+            </script> -->
+
+            {% endblock content %}
+    
+    
+    
+            <!-- Specific Page JS goes HERE  -->
+            {% block javascripts %}
+
+
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#table').DataTable({responsive: true});
+                    });
+                </script>
+
+
+            {% endblock javascripts %}
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+    <br>
+    <h1>Shortlist top profiles </h1>
+   
+    <br><br>
+		
+	</div>
+  </header>
+  
+
+	<div class="ml-container">
+	<div class="container">
+		<form action="{{ url_for('predict')}}" method="POST">
+            
+            <h2>Selection criteria </h2>
+            <br>
+            
+
+            <label for="cars">Please select the desired profile</label>
+
+            <select name="comment" class="browser-default custom-select">
+                      <option value="web_back_end">Développeur Back End</option>
+                      <option value="Developpeur Front-End">Developpeur Front-End</option>
+                      <option value="symfony">Développeur PHP/Symfony</option>  
+                    <option value="embarque">Développeur Embarqué Middleware</option>
+                    <option value="tech_jee">Technical Lead/ Architecte JEE</option>
+                    <option value="fullstack">Développeur FullStack JS</option>
+                    <option value="jee">Développeur JAVA/JEE</option>
+                    <option value="drupal">Développeur DRUPAL</option>
+                    <option value="product_owner">Product Owner/ PO</option>
+            
+              
+            </select>
+            <br> <br> 
+            Additional filters
+            <br>
+             <input type="checkbox" name="hello" value="honors" >
+              <label for="vehicle1"> Honors</label><br>
+              <input type="checkbox" name="hello" value="Tenure">
+              <label for="vehicle2"> Tenure</label><br>
+             <br>
+             <label for="cars"> Number of profiles </label>
+
+            <select name="number_p" class="browser-default custom-select">
+                    <option value=1 >1 </option>
+                    <option value=2>2 </option>
+                    <option value=3>3</option>  
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    <option value=6>6</option>
+                    <option value=7>7</option>
+                    <option value=8>8</option>
+                    <option value=9>9</option>
+            </select>
+
+             <br> <br> <br>
+        <!--    
+		<p>Enter Your Comment Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<!-- <textarea name="comment" rows="4" cols="50"></textarea>
+		<br/>-->
+
+    <p align="center">
+    <input type="submit" class="btn-info" value="Submit">
+    </p>
+		
+		
+	</form>
+		
+	</div>
+
+	</div>
+	
+
+</body>
+</html>
+

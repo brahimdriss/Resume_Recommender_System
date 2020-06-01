@@ -1,0 +1,26 @@
+
+{% extends "layouts/default.html" %}
+
+{% block title %} Tables {% endblock title %}
+
+{% block stylesheets %}
+
+{% endblock stylesheets %}
+
+{% block content %}
+<div>
+    <br><br><br>
+    <form action="{{ url_for('tabb')}}" method="POST">
+        <label for="vehicle1"> profile</label><br>
+    <input type="text" name="ccc" value="ccc" >
+              
+    <input type="submit" class="btn-info" value="show">
+		
+	</form>
+    
+</div>
+{% endblock content %}
+
+{% block javascripts %}
+
+{% endblock javascripts %}
